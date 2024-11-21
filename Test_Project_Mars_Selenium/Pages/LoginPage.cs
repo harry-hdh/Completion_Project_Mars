@@ -31,7 +31,7 @@ namespace Test_Project_Mars_Selenium.Pages
             return nameResult;
         }
 
-        public string GetWarningMsg(IWebDriver driver) { return CustomMethods.GetNotificationTxt(driver); }
+        //public string GetWarningMsg(IWebDriver driver) { return CustomMethods.GetNotificationTxt(driver); }
 
     }
 }

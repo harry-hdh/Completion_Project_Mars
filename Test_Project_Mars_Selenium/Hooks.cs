@@ -6,23 +6,23 @@ namespace Test_Project_Mars_Selenium
 {
     public class Hooks
     {
-        public IWebDriver driver;
+        protected IWebDriver _driver;
         LoginPage logIn = new LoginPage();
 
         [SetUp]
         public void Setup()
         {
-            driver = new ChromeDriver();
-            driver.Navigate().GoToUrl("http://localhost:5000/Home");
-            driver.Manage().Window.Maximize();
+            _driver = new ChromeDriver();
+            _driver.Navigate().GoToUrl("http://localhost:5000/Home");
+            _driver.Manage().Window.Maximize();
 
-            logIn.LoginAction(driver, "testing111@gmail.com", "123qweasd");
+            logIn.LoginAction(_driver, "testing111@gmail.com", "123qweasd");
         }
 
         [TearDown]
         public void Close()
         {
-            driver.Close();
+            _driver.Close();
         }
     }
 }

@@ -1,0 +1,26 @@
+[
+    {
+        "UniName": "AUT",
+        "UniCountry": "New Zealand",
+        "Title": "B.A",
+        "Degree": "Audit",
+        "GraduationYear": "2021"
+
+    },
+    {
+        "UniName": "AIS",
+        "UniCountry": "New Zealand",
+        "Title": "B.A",
+        "Degree": "IT",
+        "GraduationYear": "2021"
+
+    },
+    {
+        "UniName": "Unitec",
+        "UniCountry": "New Zealand",
+        "Title": "B.A",
+        "Degree": "Business",
+        "GraduationYear": "2021"
+
+    }
+]
