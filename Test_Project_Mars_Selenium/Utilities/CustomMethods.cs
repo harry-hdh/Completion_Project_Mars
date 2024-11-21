@@ -92,7 +92,7 @@ namespace Test_Project_Mars_Selenium.Utilities
             return result.Text;
         }
 
-        public static string GetNotificationTxt(IWebDriver driver)
+        public static bool getNotification(IWebDriver driver)
         {
 
 
@@ -102,7 +102,7 @@ namespace Test_Project_Mars_Selenium.Utilities
 
             IWebElement result = driver.FindElement(popupXpath);
 
-            return result.Text;
+            return result.Displayed;
         }
 
         public static void ClosePopUp(IWebDriver driver)
