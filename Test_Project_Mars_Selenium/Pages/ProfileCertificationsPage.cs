@@ -12,11 +12,11 @@ namespace Test_Project_Mars_Selenium.Pages
     {
         private readonly By certificationTab = By.XPath("//a[contains(text(), 'Certifications')]");
 
-        private readonly By addNewEduBtn = By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/thead/tr/th[4]/div");
+        private readonly By addNewCertBtn = By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/thead/tr/th[4]/div");
 
         private readonly By addBtn = By.XPath("//input[contains(@value,'Add')]");
 
-        private readonly By addCertBtn = By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/thead/tr/th[4]/div");
+        //private readonly By addCertBtn = By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/thead/tr/th[4]/div");
 
         private readonly By editCertBtn = By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/tbody[last()]/tr/td[4]/span[1]");
 
@@ -25,7 +25,7 @@ namespace Test_Project_Mars_Selenium.Pages
 
         private readonly By awardTxtBox = By.Name("certificationName");
 
-        private readonly By certFromTxtBox = By.Name("certificationName");
+        private readonly By certFromTxtBox = By.Name("certificationFrom");
 
         private readonly By certYearTxtBox = By.Name("certificationYear");
 
@@ -48,7 +48,7 @@ namespace Test_Project_Mars_Selenium.Pages
             CustomMethods.Click(driver, certificationTab, "wait_click");
 
             //Click Add New btn
-            CustomMethods.Click(driver, addNewEduBtn, "wait_click");
+            CustomMethods.Click(driver, addNewCertBtn, "wait_click");
 
             CustomMethods.ClearEnterText(driver, awardTxtBox, awardTxt);
 
@@ -59,13 +59,13 @@ namespace Test_Project_Mars_Selenium.Pages
             CustomMethods.Click(driver, addBtn, "just_click");
         }
 
-        public void EditEducation(IWebDriver driver, string awardTxt, string fromTxt, string yearOpt)
+        public void EditCert(IWebDriver driver, string awardTxt, string fromTxt, string yearOpt)
         {
             //Navigate to Education
             CustomMethods.Click(driver, certificationTab, "wait_click");
 
             //Click edit btn
-            CustomMethods.Click(driver, addNewEduBtn, "wait_click");
+            CustomMethods.Click(driver, editCertBtn, "wait_click");
 
             CustomMethods.ClearEnterText(driver, awardTxtBox, awardTxt);
 

@@ -65,7 +65,7 @@ namespace Test_Project_Mars_Selenium.Pages
 
             CustomMethods.SelectDropDown(driver, yearDropDown, yearOpt);
 
-            CustomMethods.Click(driver, addBtn, "wait_click");
+            CustomMethods.Click(driver, addBtn, "just_click");
         }
 
 

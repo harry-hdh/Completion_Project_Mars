@@ -61,7 +61,7 @@ namespace Test_Project_Mars_Selenium.Tests
             Assert.That(profileEduObj.IsNotiDisplayed(_driver), Is.True, $"Failed to display notification on {actionName}!");
             Assert.That(profileEduObj.GetDisplayedTxt(_driver, "uni Display").Equals(educationModel.UniName), $"Failed to {actionName} university name!");
             Assert.That(profileEduObj.GetDisplayedTxt(_driver, "degree Display").Equals(educationModel.Degree), $"Failed to {actionName} degree!");
-            Assert.That(profileEduObj.GetDisplayedTxt(_driver, "title Display").Equals(educationModel.Title), $"Failed to {actionName} degree!");
+            Assert.That(profileEduObj.GetDisplayedTxt(_driver, "title Display").Equals(educationModel.Title), $"Failed to {actionName} title!");
         }
 
         public static IEnumerable<EducationModel> AddEducation()
