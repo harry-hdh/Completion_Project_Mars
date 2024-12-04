@@ -90,9 +90,22 @@ namespace Test_Project_Mars_Selenium.Pages
             CustomMethods.Click(driver, updateBtn, "just_click");
         }
 
+        public void DeleteEducation(IWebDriver driver)
+        {
+            //Navigate to Education
+            CustomMethods.Click(driver, educationTab, "wait_click");
+
+            CustomMethods.Click(driver, removeEduBtn, "wait_click");
+        }
+
         public bool IsNotiDisplayed(IWebDriver driver)
         {
-            return CustomMethods.getNotification(driver);
+            return CustomMethods.GetNotification(driver);
+        }
+
+        public string GetNotiTxt(IWebDriver driver)
+        {
+            return CustomMethods.GetNotificationTxt(driver);
         }
 
         public string GetDisplayedTxt(IWebDriver driver, string location)

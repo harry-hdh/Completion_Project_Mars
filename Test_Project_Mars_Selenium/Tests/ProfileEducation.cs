@@ -72,6 +72,14 @@ namespace Test_Project_Mars_Selenium.Tests
             //Fail as allows to add invalid characters
         }
 
+        [Test]
+        public void DeleteEducationTest()
+        {
+            profileEduObj.DeleteEducation(_driver);
+
+            Assert.That(profileEduObj.GetNotiTxt(_driver).Contains("removed"), $"Failed to remove Education!");
+        }
+
         private void PerformEducationAction(Action action, EducationModel educationModel, string actionName, string assertType = "default")
         {
             // Act

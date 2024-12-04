@@ -20,6 +20,8 @@ namespace Test_Project_Mars_Selenium.Pages
 
         private readonly By editCertBtn = By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/tbody[last()]/tr/td[4]/span[1]");
 
+        private readonly By removeCertBtn = By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/tbody[last()]/tr/td[4]/span[2]");
+
         private readonly By updateBtn = By.XPath("//input[contains(@value,'Update')]");
 
 
@@ -76,9 +78,22 @@ namespace Test_Project_Mars_Selenium.Pages
             CustomMethods.Click(driver, updateBtn, "just_click");
         }
 
+        public void DeleteCertification(IWebDriver driver)
+        {
+            //Navigate to Cert
+            CustomMethods.Click(driver, certificationTab, "wait_click");
+
+            CustomMethods.Click(driver, removeCertBtn, "wait_click");
+        }
+
         public bool IsNotiDisplayed(IWebDriver driver)
         {
-            return CustomMethods.getNotification(driver);
+            return CustomMethods.GetNotification(driver);
+        }
+
+        public string GetNotiTxt(IWebDriver driver)
+        {
+            return CustomMethods.GetNotificationTxt(driver);
         }
 
         public string GetDisplayedTxt(IWebDriver driver, string location)
