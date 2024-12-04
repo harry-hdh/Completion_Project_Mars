@@ -92,7 +92,7 @@ namespace Test_Project_Mars_Selenium.Utilities
             return result.Text;
         }
 
-        public static bool getNotification(IWebDriver driver)
+        public static bool GetNotification(IWebDriver driver)
         {
 
 
@@ -103,6 +103,19 @@ namespace Test_Project_Mars_Selenium.Utilities
             IWebElement result = driver.FindElement(popupXpath);
 
             return result.Displayed;
+        }
+
+        public static string GetNotificationTxt(IWebDriver driver)
+        {
+
+
+            var popupXpath = By.XPath("//div[contains(@class, 'ns-box-inner')]");
+
+            CustomWait.WaitToBeVisible(driver, popupXpath, 15);
+
+            IWebElement result = driver.FindElement(popupXpath);
+
+            return result.Text;
         }
 
         public static void ClosePopUp(IWebDriver driver)
