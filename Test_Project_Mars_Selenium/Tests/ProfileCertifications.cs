@@ -58,6 +58,14 @@ namespace Test_Project_Mars_Selenium.Tests
             );
         }
 
+        [Test]
+        public void DeleteCertificationTest()
+        {
+            profileCertObj.DeleteCertification(_driver);
+
+            Assert.That(profileCertObj.GetNotiTxt(_driver).Contains("deleted"), $"Failed to remove Certification!");
+        }
+
         private void PerformEducationAction(Action action, CertificationModel certificationModel, string actionName, string assertType = "default")
         {
             // Act
